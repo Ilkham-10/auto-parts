@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Автозапчасти</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+    <header>
+    <div class="logo">
+        <p class="identity">🚗 Автозапчасти</p>
+    </div>
+    <nav class="nav-bar">
+        <button>Главная</button>
+        <button>Услуги</button>
+        <button>О нас</button>
+        <button>Обзор</button>
+        <button>Контакты</button>
+        <button>Акции</button>
+    </nav>
+
+    <section id="Главная" class="content-section active">
+    <h2>Автозапчасти</h2>
+    <p>Добро пожаловать! Здесь вы найдете качественные автозапчасти для всех марок автомобилей. Надежность и доступные цены для вашего автомобиля.</p>
+    </section>
+
+    <section id="Услуги" class="content-section">
+    <h2>Наши услуги</h2>
+    <p>Мы предоставляем ремонт автозапчастей, диагностику и установку новых комплектующих с гарантией качества.</p>
+    </section>
+
+    <section id="О нас" class="content-section">
+    <h2>О компании</h2>
+    <p>Наша компания работает на рынке более 10 лет, предоставляя лучшую автоаксессуарику и сервис.</p>
+    </section>
+
+    <section id="Обзор" class="content-section">
+    <h2>Обзор продукции</h2>
+    <p>Всегда актуальные обзоры новых автозапчастей и компонентов с фото и видео.</p>
+    </section>
+
+    <section id="Контакты" class="content-section">
+    <h2>Свяжитесь с нами</h2>
+    <p>Телефон: +7 123 456 7890 | Email: info@autoparts.ru | Адрес: ул. Примерная, д. 1</p>
+    </section>
+
+    <section id="Акции" class="content-section">
+    <h2>Акционные предложения</h2>
+    <p>Скидки до 30% на популярные автозапчасти. Успейте приобрести выгодно!</p>
+
+
+</section>
+    </header>
+
+    <main>
+    <section class="hero">
+        <h1 class="fade-in">Добро пожаловать в магазин автозапчастей</h1>
+        <p class="slide-in">У нас вы найдёте запчасти для любых марок авто.</p>
+        <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Автозапчасти" class="bounce" />
+    </section>
+
+    <section class="products">
+        <h2 class="zoom-in">Популярные товары</h2>
+        <div class="cards">
+        <div class="card pulse">
+            <img src="https://avatars.mds.yandex.net/get-mpic/4448948/img_id2001779175321416159.jpeg/orig" alt="Тормозные колодки" />
+            <h3>Тормозные колодки</h3>
+            <p>Высокое качество, подходит для большинства моделей.</p>
+        </div>
+        <div class="card pulse">
+            <img src="https://i.ebayimg.com/images/g/CAQAAOSwKk1nIK2j/s-l1600.jpg" alt="Масляный фильтр" />
+            <h3>Масляный фильтр</h3>
+            <p>Защита двигателя от загрязнений.</p>
+        </div>
+        <div class="card pulse">
+            <img src="https://shop.record-auto.ru/ckeditor_assets/pictures/181/content_ngk_%D1%81%D0%B2%D0%B5%D1%87%D0%B8.jpeg" alt="Свечи зажигания" />
+            <h3>Свечи зажигания</h3>
+            <p>Максимальная производительность двигателя.</p>
+        </div>
+        </div>
+    </section>
+
+    <section class="about fade-in">
+        <h2>О нас</h2>
+        <p>Мы специализируемся на качественных автозапчастях и отличном сервисе уже более 10 лет.</p>
+    </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Логотип автозапчастей" class="footer-logo" />
+        <div class="footer-info">
+        <p class="end">© 2025 Магазин Автозапчастей</p>
+        <p>Телефон: +7 123 456 7890</p>
+        <p>Email: info@autoparts.ru</p>
+        <p>Адрес: ул. Примерная, д. 1</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    const buttons = document.querySelectorAll('.nav-bar button');
+    const sections = document.querySelectorAll('.content-section');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+        // Удаляем active у всех секций
+        sections.forEach(s => s.classList.remove('active'));
+        // Добавляем active тому, чей id совпадает с текстом кнопки
+        const targetSection = document.getElementById(btn.textContent);
+        if(targetSection) targetSection.classList.add('active');
+        // Скроллим наверх для удобства
+        window.scrollTo({top: 0, behavior: 'smooth'});
+        });
+    });
+</script>
+
+    
+
+</body>
+</html>
