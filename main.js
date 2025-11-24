@@ -29,7 +29,7 @@ document.querySelector("#type-filter").addEventListener("change", (evt) => {
             <li>Тормоза - 8000 ₽</li>
             <li>Аккумулятор - 6000 ₽</li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Машины" style="max-width: 100%;"/>
+            <img src="https://i.pinimg.com/originals/e1/f1/45/e1f1459e0aa2689117812da18eff6082.jpg" alt="Машины" style="max-width: 100%;"/>
         `
         },
         "bikes": {
@@ -41,7 +41,7 @@ document.querySelector("#type-filter").addEventListener("change", (evt) => {
             <li>Цепь - 5000 ₽</li>
             <li>Тормоза - 4000 ₽</li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/744/744281.png" alt="Мотоциклы" style="max-width: 100%;"/>
+            <img src="https://universalmotors.ru/motorcycles/benda/motorcycle-benda-chinchilla-300/1052199999733-sx1920x1080g403046.jpg" alt="Мотоциклы" style="max-width: 100%;"/>
         `
         },
         "tractors": {
@@ -76,7 +76,7 @@ const modal = document.getElementById('info-modal');
             <li>Тормоза - 8000 ₽</li>
             <li>Аккумулятор - 6000 ₽</li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Машины" style="max-width: 100%;"/>
+            <img src="https://i.pinimg.com/originals/e1/f1/45/e1f1459e0aa2689117812da18eff6082.jpg" alt="Машины" style="max-width: 100%;"/>
         `
         },
         "bikes": {
@@ -88,7 +88,7 @@ const modal = document.getElementById('info-modal');
             <li>Цепь - 5000 ₽</li>
             <li>Тормоза - 4000 ₽</li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/744/744281.png" alt="Мотоциклы" style="max-width: 100%;"/>
+            <img src="https://universalmotors.ru/motorcycles/benda/motorcycle-benda-chinchilla-300/1052199999733-sx1920x1080g403046.jpg" alt="Мотоциклы" style="max-width: 100%;"/>
         `
         },
         "tractors": {
@@ -99,7 +99,7 @@ const modal = document.getElementById('info-modal');
             <li>Двигатель - 30000 ₽</li>
             <li>Колёса - 12000 ₽ за штуку</li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/744/744127.png" alt="Тракторы" style="max-width: 100%;"/>
+            <img src="https://www.opex.ru/upload/medialibrary/001/x915A0608.jpg.pagespeed.ic.mI_ZC-K_pc.jpg" alt="Тракторы" style="max-width: 100%;"/>
         `
         }
     };

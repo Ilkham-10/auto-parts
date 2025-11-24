@@ -115,6 +115,18 @@
     }
 
 
+    .about-us {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+    }
+
+    .info-section {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        padding-bottom: 15px;
+    }
+
     /* Анимации */
 
     @keyframes fadeIn {
