@@ -2,64 +2,130 @@
 const buttons = document.querySelectorAll('.nav-bar button');
 const sections = document.querySelectorAll('.content-section');
 
-const searchInputlag = document.getElementById('search-Inputlag');
-const typeFilterx = document.getElementById('type-filterx');
-
-
-// Функция скрывать все секции с деталями
-    function hideAllInfoSections() {
-        document.querySelectorAll('.content-section').forEach(section => {
-        if(section.id.endsWith('-info')) {
-            section.style.display = 'none';
-        }
+buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+        // Удаляем active у всех секций
+        sections.forEach(s => s.classList.remove('active'));
+        // Добавляем active тому, чей id совпадает с текстом кнопки
+        const targetSection = document.getElementById(btn.textContent);
+        if(targetSection) targetSection.classList.add('active');
+        // Скроллим наверх для удобства
+        window.scrollTo({top: 0, behavior: 'smooth'});
         });
+    });
+
+
+
+document.querySelector("#type-filter").addEventListener("change", (evt) => {
+    console.log(evt.target.value)
+    const container = document.querySelector(".container")
+    const infoData = {
+        "cars": {
+        title: "Информация о Машинах",
+        content: `
+            <p>Современные автомобили: надежные и комфортные.</p>
+            <ul>
+            <li>Двигатель - 25000 ₽</li>
+            <li>Тормоза - 8000 ₽</li>
+            <li>Аккумулятор - 6000 ₽</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Машины" style="max-width: 100%;"/>
+        `
+        },
+        "bikes": {
+        title: "Информация о Мотоциклах",
+        content: `
+            <p>Двухколёсные транспортные средства для любителей скорости.</p>
+            <ul>
+            <li>Двигатель - 15000 ₽</li>
+            <li>Цепь - 5000 ₽</li>
+            <li>Тормоза - 4000 ₽</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744281.png" alt="Мотоциклы" style="max-width: 100%;"/>
+        `
+        },
+        "tractors": {
+        title: "Информация о Тракторах",
+        content: `
+            <p>Мощная сельхозтехника для тяжелых работ.</p>
+            <ul>
+            <li>Двигатель - 30000 ₽</li>
+            <li>Колёса - 12000 ₽ за штуку</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744127.png" alt="Тракторы" style="max-width: 100%;"/>
+        `
+        }
+    };
+
+    container.innerHTML = infoData [evt.target.value]
+
+})
+console.log(document.querySelector("#type-filter"))
+
+const modal = document.getElementById('info-modal');
+    const modalBody = document.getElementById('modal-body');
+    const closeButton = modal.querySelector('.close-button');
+
+    const infoData = {
+        "cars": {
+        title: "Информация о Машинах",
+        content: `
+            <p>Современные автомобили: надежные и комфортные.</p>
+            <ul>
+            <li>Двигатель - 25000 ₽</li>
+            <li>Тормоза - 8000 ₽</li>
+            <li>Аккумулятор - 6000 ₽</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743131.png" alt="Машины" style="max-width: 100%;"/>
+        `
+        },
+        "bikes": {
+        title: "Информация о Мотоциклах",
+        content: `
+            <p>Двухколёсные транспортные средства для любителей скорости.</p>
+            <ul>
+            <li>Двигатель - 15000 ₽</li>
+            <li>Цепь - 5000 ₽</li>
+            <li>Тормоза - 4000 ₽</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744281.png" alt="Мотоциклы" style="max-width: 100%;"/>
+        `
+        },
+        "tractors": {
+        title: "Информация о Тракторах",
+        content: `
+            <p>Мощная сельхозтехника для тяжелых работ.</p>
+            <ul>
+            <li>Двигатель - 30000 ₽</li>
+            <li>Колёса - 12000 ₽ за штуку</li>
+            </ul>
+            <img src="https://cdn-icons-png.flaticon.com/512/744/744127.png" alt="Тракторы" style="max-width: 100%;"/>
+        `
+        }
+    };
+
+    // Функция показа модального окна с нужной информацией
+    function showInfoModal(type) {
+        if(!infoData[type]) return;
+        modalBody.innerHTML = `<h2>${infoData[type].title}</h2>` + infoData[type].content;
+        modal.style.display = 'block';
     }
 
-    // Показать секцию по типу
-    function showInfoSection(type) {
-        hideAllInfoSections();
+    closeButton.onclick = () => modal.style.display = 'none';
+    window.onclick = (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+    };
+
+    document.getElementById('type-filter').addEventListener('change', () => {
+        const type = document.getElementById('type-filter').value;
         if(type !== 'all') {
-        const section = document.getElementById(type + '-info');
-        if(section) section.style.display = 'block';
-        }
-    }
-
-    document.getElementById('search-button').addEventListener('click', () => {
-        const query = searchInput.value.trim().toLowerCase();
-        const type = typeFilter.value;
-
-        // Логика: если в поиске есть ключевые слова из типов, то показываем соответствующую секцию
-        const types = ['машины', 'мотоциклы', 'тракторы'];
-
-        let foundType = null;
-
-        // Проверяем подходит ли ввод под один из типов
-        if(types.includes(query)) {
-        foundType = query;
-        } else if(type !== 'all') {
-        foundType = type;
-        }
-
-        if(foundType) {
-        showInfoSection(foundType);
-        // Прокрутка к результатам (опционально)
-        document.getElementById(foundType + '-info').scrollIntoView({behavior: 'smooth'});
-        } else {
-        // Если ничего не найдено или не выбран тип, скрываем все
-        hideAllInfoSections();
-        alert('По вашему запросу ничего не найдено или выберите тип транспорта.');
+        showInfoModal(type);
+        // сброс поиска, если нужно
+        document.getElementById('search-input').value = '';
         }
     });
 
-    // Можно добавить автопоказ по изменению типа фильтра
-    typeFilter.addEventListener('change', () => {
-        searchInput.value = ''; // очистка поиска при смене
-        hideAllInfoSections();
-        if(typeFilter.value !== 'all') {
-        showInfoSection(typeFilter.value);
-        document.getElementById(typeFilter.value + '-info').scrollIntoView({behavior: 'smooth'});
-        }
-    });
+
 
 
 buttons.forEach(button => {
