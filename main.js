@@ -25,9 +25,9 @@ document.querySelector("#type-filter").addEventListener("change", (evt) => {
         content: `
             <p>Современные автомобили: надежные и комфортные.</p>
             <ul>
-            <li>Двигатель - 25000 ₽</li>
-            <li>Тормоза - 8000 ₽</li>
-            <li>Аккумулятор - 6000 ₽</li>
+            <li class="generator"> <button class="button-generator">Двигатель - 25000 ₽</button></li>
+            <li class="auto-brake"> <button class="button-auto-brake">Тормоза - 8000 ₽</button></li>
+            <li class="battery"> <button class="button-battery">Аккумулятор - 6000 ₽</button></li>
             </ul>
             <img src="https://i.pinimg.com/originals/e1/f1/45/e1f1459e0aa2689117812da18eff6082.jpg" alt="Машины" style="max-width: 100%;"/>
         `
@@ -37,9 +37,9 @@ document.querySelector("#type-filter").addEventListener("change", (evt) => {
         content: `
             <p>Двухколёсные транспортные средства для любителей скорости.</p>
             <ul>
-            <li>Двигатель - 15000 ₽</li>
-            <li>Цепь - 5000 ₽</li>
-            <li>Тормоза - 4000 ₽</li>
+            <li class="bike-generator"> <button class="button-bike-generator">Двигатель - 15000 ₽</button></li>
+            <li class="bike-chain"> <button class="button-chain">Цепь - 5000 ₽</button></li>
+            <li class="bike-brake"> <button class="button-bike-brake">Тормоза - 4000 ₽</button></li>
             </ul>
             <img src="https://universalmotors.ru/motorcycles/benda/motorcycle-benda-chinchilla-300/1052199999733-sx1920x1080g403046.jpg" alt="Мотоциклы" style="max-width: 100%;"/>
         `
@@ -49,15 +49,15 @@ document.querySelector("#type-filter").addEventListener("change", (evt) => {
         content: `
             <p>Мощная сельхозтехника для тяжелых работ.</p>
             <ul>
-            <li>Двигатель - 30000 ₽</li>
-            <li>Колёса - 12000 ₽ за штуку</li>
+            <li class="tractor-generator"> <button class="button-tractor-generator">Двигатель - 30000 ₽</button></li>
+            <li class="tractor-wheels"> <button class="button-tractor-wheels">Колёса - 12000 ₽ за штуку</button></li>
             </ul>
-            <img src="https://cdn-icons-png.flaticon.com/512/744/744127.png" alt="Тракторы" style="max-width: 100%;"/>
+            <img src="https://www.opex.ru/upload/medialibrary/001/x915A0608.jpg.pagespeed.ic.mI_ZC-K_pc.jpg" alt="Тракторы" style="max-width: 100%;"/>
         `
         }
     };
 
-    container.innerHTML = infoData [evt.target.value]
+    container.innerHTML = infoData [evt.target.value].content
 
 })
 console.log(document.querySelector("#type-filter"))

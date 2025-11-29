@@ -21,6 +21,7 @@
 
 
     .modal {
+        padding-left: 620px;
         position: fixed;
         z-index: 1000;
         left: 0; top: 0;
@@ -126,6 +127,114 @@
         font-size: large;
         padding-bottom: 15px;
     }
+    
+
+    .generator {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .battery {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .auto-brake {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .bike-generator {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .bike-chain {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .bike-brake {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .tractor-generator {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .tractor-wheels {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: larger;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+
+    .button-generator {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-auto-brake {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-battery {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-bike-generator {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-chain {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-bike-brake {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-tractor-generator {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+    .button-tractor-wheels {
+        font-size: large;
+        background-color: aqua;
+        border-radius: 12px;
+    }
+
+
 
     /* Анимации */
 
