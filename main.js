@@ -18,6 +18,7 @@ buttons.forEach(btn => {
 
 document.querySelector("#type-filter").addEventListener("change", (evt) => {
     console.log(evt.target.value)
+    
     const container = document.querySelector(".container")
     const infoData = {
         "cars": {
@@ -103,6 +104,83 @@ const modal = document.getElementById('info-modal');
         `
         }
     };
+
+
+    const cartBtn = document.getElementById('cart-button');
+    const cartModal = document.getElementById('cart-modal');
+    const cartList = document.getElementById('cart-list');
+    const cartCount = document.getElementById('cart-count');
+    const emptyMessage = document.getElementById('empty-message');
+    const closeCart = document.getElementById('close-cart');
+
+    // Загрузка корзины из localStorage или создание пустой
+    let cart = JSON.parse(localStorage.getItem('autoPartsCart')) || [];
+
+    // Обновление числа товаров на кнопке
+    const updateCartCount = () => {
+        cartCount.textContent = cart.length;
+    }
+
+    // Обновление отображения корзины
+    const renderCart = () => {
+        cartList.innerHTML = '';
+        if (cart.length === 0) {
+        emptyMessage.style.display = 'block';
+        cartList.style.display = 'none';
+        } else {
+        emptyMessage.style.display = 'none';
+        cartList.style.display = 'block';
+        cart.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Удалить';
+            removeBtn.className = 'remove-btn';
+        removeBtn.onclick = () => {
+            cart.splice(index,1);
+            localStorage.setItem('autoPartsCart', JSON.stringify(cart));
+            renderCart();
+            updateCartCount();
+            }
+            li.appendChild(removeBtn);
+            cartList.appendChild(li);
+        });
+        }
+    }
+
+    // Открыть/закрыть корзину
+    cartBtn.onclick = () => {
+        renderCart();
+        cartModal.classList.add('active');
+    }
+    closeCart.onclick = () => {
+        cartModal.classList.remove('active');
+    }
+    // Закрывать по клику вне окна
+    cartModal.onclick = (e) => {
+        if(e.target === cartModal) cartModal.classList.remove('active');
+    }
+
+    // Функция добавления товара в корзину
+    function addToCart(itemName){
+        cart.push(itemName);
+        localStorage.setItem('autoPartsCart', JSON.stringify(cart));
+        updateCartCount();
+    }
+
+    // При загрузке обновляем количество
+    updateCartCount();
+
+    // Добавьте этот скрипт к каждой кнопке "купить" во всех разделах
+    // Ниже пример как привязать на кнопки:
+    document.querySelectorAll('button[class^="button-"]').forEach(button => {
+        button.addEventListener('click', () => {
+        // Получаем текст кнопки (название + цена)
+        addToCart(button.textContent);
+        alert(`Добавлено в корзину: ${button.textContent}`);
+        });
+    });
+
 
     // Функция показа модального окна с нужной информацией
     function showInfoModal(type) {

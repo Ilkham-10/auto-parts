@@ -190,50 +190,142 @@
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-auto-brake {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-battery {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-bike-generator {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-chain {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-bike-brake {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-tractor-generator {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
     .button-tractor-wheels {
         font-size: large;
         background-color: aqua;
         border-radius: 12px;
+        padding: 0.5rem 1rem;
     }
 
+
+        .cart-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #ff6f00;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 16px;
+        cursor: pointer;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+    .cart-button img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Оверлей и модальное окно для корзины */
+    .cart-modal {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-modal.active {
+        display: flex;
+    }
+    .cart-content {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 320px;
+        max-height: 80vh;
+        overflow-y: auto;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    .cart-content h2 {
+        margin-top: 0;
+    }
+    .cart-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .cart-list li {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cart-list button.remove-btn {
+        background: #e53935;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+    .empty-message {
+        text-align: center;
+        color: #777;
+        font-style: italic;
+    }
+
+    .close-cart {
+        background: #2196f3;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+    }
 
 
     /* Анимации */
