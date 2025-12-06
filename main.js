@@ -14,6 +14,86 @@ buttons.forEach(btn => {
         });
     });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const openBasket = document.getElementById('openBasket');
+    const basketModal = document.getElementById('basketModal');
+    const closeBasket = document.getElementById('closeBasket');
+    const basketList = document.getElementById('basket-list');
+    const emptyMessage = document.getElementById('empty-message');
+    const cartCount = document.getElementById('cart-count');
+    const totalPrice = document.getElementById('total-price');
+
+    // Массив для хранения товаров в корзине
+    let cartItems = [];
+
+    // Функция: обновить отображение корзины
+    function updateCartDisplay() {
+        // Очищаем список
+        basketList.innerHTML = '';
+
+        if (cartItems.length === 0) {
+            emptyMessage.style.display = 'block';
+            basketList.style.display = 'none';
+            cartCount.textContent = '0';
+            totalPrice.textContent = '0 ₽';
+        } else {
+            emptyMessage.style.display = 'none';
+            basketList.style.display = 'block';
+            cartCount.textContent = cartItems.length;
+
+            let total = 0;
+
+            // Заполняем список товаров
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'basket-item';
+
+                li.innerHTML = `
+                    <span class="item-name">${item.name}</span>
+                    <span class="item-price">${item.price} ₽</span>
+                `;
+
+                basketList.appendChild(li);
+                total += item.price;
+            });
+
+            totalPrice.textContent = `${total} ₽`;
+        }
+    }
+
+    // Функция: добавить товар в корзину
+    function addToCart(name, price) {
+        cartItems.push({ name, price });
+        updateCartDisplay();
+    }
+
+    // Обработчик: открыть корзину
+    openBasket.addEventListener('click', function() {
+        basketModal.style.display = 'flex';
+    });
+
+    // Обработчик: закрыть корзину
+    closeBasket.addEventListener('click', function() {
+        basketModal.style.display = 'none';
+    });
+
+    // Закрытие корзины при клике вне содержимого
+    basketModal.addEventListener('click', function(e) {
+        if (e.target === basketModal) {
+            basketModal.style.display = 'none';
+        }
+    });
+
+    // Пример: добавим несколько товаров для демонстрации
+    // В реальной версии эти вызовы будут из карточек товаров
+    addToCart('Фильтр масляный', 350);
+    addToCart('Свечи зажигания', 890);
+    addToCart('Тормозные колодки', 1200);
+
+    // Инициализация отображения
+    updateCartDisplay();
+});
+
 
 
 document.querySelector("#type-filter").addEventListener("change", (evt) => {
