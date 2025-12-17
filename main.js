@@ -96,6 +96,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
 document.querySelector("#type-filter").addEventListener("change", (evt) => {
     console.log(evt.target.value)
     
