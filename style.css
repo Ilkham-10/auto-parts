@@ -1,4 +1,6 @@
+    /*стили для всего сайта */
     * {
+        align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +12,143 @@
     margin: 0;
     padding: 0;
     }
+
+    /*поисковая панель*/
+    /* Центрирование поисковой панели и фильтров */
+    .search-filter {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Центрирует блок по горизонтали */
+    padding: 20px 15px;
+    box-sizing: border-box;
+    text-align: center;
+    }
+
+    /* Поле поиска */
+    #search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #444;
+    background-color: #ffffff;
+    outline: none;
+    transition: 
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    #search-input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+    }
+
+    /* Контейнер фильтров */
+    .filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+    }
+
+    /* Выпадающий список (фильтр по типу) */
+    #type-filter {
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #444;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    appearance: none; /* Убирает стандартные стрелки в некоторых браузерах */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="%23757575" stroke-width="2"><path d="M7 10l5 5 5-5"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px 16px;
+    padding-right: 40px; /* Место для кастомной стрелки */
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    }
+
+    #type-filter:focus,
+    #type-filter:hover {
+    border-color: #667eea;
+    }
+
+    /* Кнопка «Искать» */
+    #search-button {
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(45deg, #4caf50, #2e7d32);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+    white-space: nowrap;
+    }
+
+    #search-button:hover {
+    background: linear-gradient(45deg, #388e3c, #1b5a20);
+    transform: translateY(-1px);
+    }
+
+    #search-button:active {
+    transform: translateY(0);
+    }
+
+    /* Контейнер для товаров (тоже по центру) */
+    #products-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 30px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    }
+
+    .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    justify-items: center;
+    }
+
+    /* Адаптивность: на узких экранах — вертикальная компоновка */
+    @media (max-width: 600px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #type-filter,
+    #search-button {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    #search-input {
+        max-width: none;
+    }
+    }
+
+    /* Дополнительные эстетические штрихи */
+    .search-filter {
+    backdrop-filter: blur(10px); /* Если поддерживается */
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+
 
     .header-top {
     background: linear-gradient(90deg, #ffcc00, #ffa500);
