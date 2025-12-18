@@ -149,7 +149,7 @@ console.log(document.querySelector("#type-filter"))
 
 const modal = document.getElementById('info-modal');
     const modalBody = document.getElementById('modal-body');
-    const closeButton = modal.querySelector('.close-button');
+    const closeButton = document.querySelector('.close-button');
 
     const infoData = {
         "cars": {
@@ -190,7 +190,12 @@ const modal = document.getElementById('info-modal');
     };
 
 
-    const cartBtn = document.getElementById('cart-button');
+
+
+
+    
+    const cartBtn = document.getElementById('openBasket');
+    console.log(openBasket)
     const cartModal = document.getElementById('cart-modal');
     const cartList = document.getElementById('cart-list');
     const cartCount = document.getElementById('cart-count');
@@ -220,6 +225,7 @@ const modal = document.getElementById('info-modal');
             const removeBtn = document.createElement('button');
             removeBtn.textContent = 'Удалить';
             removeBtn.className = 'remove-btn';
+            closeCart.className = 'closeBasket';
         removeBtn.onclick = () => {
             cart.splice(index,1);
             localStorage.setItem('autoPartsCart', JSON.stringify(cart));
@@ -321,6 +327,7 @@ const cards = document.querySelectorAll('.products .card');
     // Прячем все карточки, показываем только те, что соответствуют поиску и фильтру
     cards.forEach(card => {
         const name = card.getAttribute('data-name').toLowerCase();
+        console.log(name)
         const type = card.getAttribute('data-type');
 
         const matchesQuery = name.includes(query);

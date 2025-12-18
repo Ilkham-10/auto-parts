@@ -56,7 +56,8 @@
     }
 
     /* Выпадающий список (фильтр по типу) */
-    #type-filter {
+    #type-filter:hover {
+        animation: neon-pulse;
     padding: 12px 20px;
     font-size: 15px;
     color: #444;
@@ -79,7 +80,8 @@
     }
 
     /* Кнопка «Искать» */
-    #search-button {
+    #search-button:hover {
+        animation: glitch;
     padding: 14px 30px;
     font-size: 16px;
     font-weight: 600;
@@ -103,6 +105,11 @@
     #search-button:active {
     transform: translateY(0);
     }
+
+    .search-inform {
+        text-decoration: underline red;
+    }
+
 
     /* Контейнер для товаров (тоже по центру) */
     #products-container {
@@ -533,7 +540,7 @@
     }
     }
 
-
+    
     
     /* Оверлей и модальное окно для корзины */
     
