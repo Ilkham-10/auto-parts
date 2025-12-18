@@ -56,8 +56,7 @@
     }
 
     /* Выпадающий список (фильтр по типу) */
-    #type-filter:hover {
-        animation: neon-pulse;
+    #type-filter {
     padding: 12px 20px;
     font-size: 15px;
     color: #444;
@@ -80,8 +79,7 @@
     }
 
     /* Кнопка «Искать» */
-    #search-button:hover {
-        animation: glitch;
+    #search-button {
     padding: 14px 30px;
     font-size: 16px;
     font-weight: 600;
@@ -105,11 +103,6 @@
     #search-button:active {
     transform: translateY(0);
     }
-
-    .search-inform {
-        text-decoration: underline red;
-    }
-
 
     /* Контейнер для товаров (тоже по центру) */
     #products-container {
@@ -481,6 +474,10 @@
     align-items: center;
     }
 
+    .tormoz, .tormoz-description, .butter-filter, .butter-filter-text, .spark-plugs, .spark-plugs-text {
+        padding: 10px;
+    }
+
     .item-name {
     flex: 1;
     margin-right: 10px;
@@ -540,7 +537,7 @@
     }
     }
 
-    
+
     
     /* Оверлей и модальное окно для корзины */
     
@@ -793,4 +790,3 @@
 
 
     
-

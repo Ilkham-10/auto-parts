@@ -1,4 +1,3 @@
-
 const buttons = document.querySelectorAll('.nav-bar button');
 const sections = document.querySelectorAll('.content-section');
 
@@ -13,6 +12,10 @@ buttons.forEach(btn => {
         window.scrollTo({top: 0, behavior: 'smooth'});
         });
     });
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const openBasket = document.getElementById('openBasket');
@@ -193,7 +196,6 @@ const modal = document.getElementById('info-modal');
 
 
 
-    
     const cartBtn = document.getElementById('openBasket');
     console.log(openBasket)
     const cartModal = document.getElementById('cart-modal');
@@ -201,6 +203,8 @@ const modal = document.getElementById('info-modal');
     const cartCount = document.getElementById('cart-count');
     const emptyMessage = document.getElementById('empty-message');
     const closeCart = document.getElementById('close-cart');
+
+    
 
     // Загрузка корзины из localStorage или создание пустой
     let cart = JSON.parse(localStorage.getItem('autoPartsCart')) || [];
@@ -243,9 +247,7 @@ const modal = document.getElementById('info-modal');
         renderCart();
         cartModal.classList.add('active');
     }
-    closeCart.onclick = () => {
-        cartModal.classList.remove('active');
-    }
+    
     // Закрывать по клику вне окна
     cartModal.onclick = (e) => {
         if(e.target === cartModal) cartModal.classList.remove('active');
