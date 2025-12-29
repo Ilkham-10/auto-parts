@@ -5,10 +5,17 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    
     }
+
 
     
     body, html {
+    background-image: url('./img/i.webp');
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     }
@@ -56,7 +63,8 @@
     }
 
     /* Выпадающий список (фильтр по типу) */
-    #type-filter {
+    #type-filter:hover {
+        animation: neon-pulse;
     padding: 12px 20px;
     font-size: 15px;
     color: #444;
@@ -79,7 +87,8 @@
     }
 
     /* Кнопка «Искать» */
-    #search-button {
+    #search-button:hover {
+        animation: glitch;
     padding: 14px 30px;
     font-size: 16px;
     font-weight: 600;
@@ -103,6 +112,11 @@
     #search-button:active {
     transform: translateY(0);
     }
+
+    .search-inform {
+        text-decoration: underline red;
+    }
+
 
     /* Контейнер для товаров (тоже по центру) */
     #products-container {
@@ -159,8 +173,54 @@
     }
 
 
-    
+    form {
+        background: url(https://i.pinimg.com/474x/f1/5a/61/f15a618dce1173d94edae6a596e53a6e.jpg?nii=t) ;
+        legend {
+            color: white;
+        }
+        max-width: 620px;
+        margin: 3rem auto;
+        font-family: Roboto, monospace;
 
+        fieldset {
+            padding: 2rem;
+
+            legend {
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            label {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                margin-top: 1rem;
+                padding: 0.5rem 1rem;
+                gap: 0.5rem;
+
+                input, textarea {
+                    padding: 0.5rem 1rem;
+                    border: none;
+                    border-radius: 0.5rem;
+                }
+                }
+            }
+        }
+
+        .form-buttons {
+        input[type="submit"] {
+        font-family: Roboto, monospace;
+        padding: 0.5rem;
+        background-color: aqua;
+        min-width: 150px;
+        }
+
+        input[type="reset"] {
+            font-family: Roboto, monospace;
+            padding: 0.5rem;
+        background-color: red;
+    }
+}
 
     .container {
     max-width: 1200px; /* Ограничивает ширину */
@@ -185,6 +245,7 @@
     }
 
     .identity {
+    padding-right: 850px;
     font-size: 1.8rem;
     font-weight: 700;
     color: #333;
@@ -193,6 +254,7 @@
     }
 
     .nav-bar {
+        padding-right: 650px;
     padding-left: 650px;
     display: flex;
     gap: 18px;
@@ -474,10 +536,6 @@
     align-items: center;
     }
 
-    .tormoz, .tormoz-description, .butter-filter, .butter-filter-text, .spark-plugs, .spark-plugs-text {
-        padding: 10px;
-    }
-
     .item-name {
     flex: 1;
     margin-right: 10px;
@@ -537,7 +595,7 @@
     }
     }
 
-
+    
     
     /* Оверлей и модальное окно для корзины */
     

@@ -1,3 +1,6 @@
+
+
+
 const buttons = document.querySelectorAll('.nav-bar button');
 const sections = document.querySelectorAll('.content-section');
 
@@ -310,6 +313,7 @@ buttons.forEach(button => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 });
+
 
 
 

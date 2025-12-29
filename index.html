@@ -8,13 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
-
     <header>
 
-        
-<div class="search-filter">
-    <input type="text" id="search-input" class="search-inform" placeholder="Введите нужную вам автозапчасть..." />
 
+<div class="search-filter">
+    <input  type="text" id="search-input" class="search-inform" placeholder="Поиск автозапчастей..." />
 
 
 
@@ -30,6 +28,9 @@
     </div>
 
 
+
+
+<div class="container">
 <div class="basket-container">
 <button class="basket-btn" id="openBasket">
     <span class="icon-wrapper">
@@ -46,13 +47,13 @@
     <div class="basket-content">
     <h3>Ваша корзина</h3>
     <button class="close-btn" id="closeBasket">&times;</button>
-    
+
     <ul id="basket-list" class="basket-items">
         <!-- Здесь будут динамически добавляться товары -->
     </ul>
-    
+
     <p id="empty-message" class="empty-message">Корзина пуста</p>
-    
+
     <div class="basket-footer">
         <p><strong>Итого:</strong> <span id="total-price">0 ₽</span></p>
         <button class="checkout-btn">Оформить заказ</button>
@@ -66,6 +67,30 @@
 </div>
 
 
+<form action="">
+<fieldset>
+        <legend>Регитсрация на сайте✍️</legend>
+    <label for="">
+        "ФИО:"
+        <input type="text" name="name" required minlength="2" placeholder="Введите ваше имя">
+    </label>
+    <label for="">
+        "Email:"
+        <input type="text" name="email" required placeholder="example@gmail.com">
+    </label>
+    <label for="">
+        "Телефон"
+        <input type="text" name="phone" placeholder="+7153285732" pattern="\+7[0-9]{10}">
+    </label>
+    
+    <div class="form-buttons">
+        <input type="reset">
+        <input type="submit">
+    </div>
+    
+</form>
+
+</fieldset>
 
 
 
@@ -126,18 +151,18 @@
         <div class="cards">
         <div class="card pulse">
             <img src="https://avatars.mds.yandex.net/get-mpic/4448948/img_id2001779175321416159.jpeg/orig" alt="Тормозные колодки" />
-            <h3 class="tormoz">Тормозные колодки</h3>
-            <p class="tormoz-description">Высокое качество, подходит для большинства моделей.</p>
+            <h3>Тормозные колодки</h3>
+            <p>Высокое качество, подходит для большинства моделей.</p>
         </div>
         <div class="card pulse">
             <img src="https://i.ebayimg.com/images/g/CAQAAOSwKk1nIK2j/s-l1600.jpg" alt="Масляный фильтр" />
-            <h3 class="butter-filter">Масляный фильтр</h3>
-            <p class="butter-filter-text">Защита двигателя от загрязнений.</p>
+            <h3>Масляный фильтр</h3>
+            <p>Защита двигателя от загрязнений.</p>
         </div>
         <div class="card pulse">
             <img src="https://shop.record-auto.ru/ckeditor_assets/pictures/181/content_ngk_%D1%81%D0%B2%D0%B5%D1%87%D0%B8.jpeg" alt="Свечи зажигания" />
-            <h3 class="spark-plugs">Свечи зажигания</h3>
-            <p class="spark-plugs-text">Максимальная производительность двигателя.</p>
+            <h3>Свечи зажигания</h3>
+            <p>Максимальная производительность двигателя.</p>
         </div>
         </div>
     </section>
@@ -160,11 +185,12 @@
     </div>
 </footer>
 
-    
+
 
 
 <script src="main.js"></script>
 
 
 </body>
+</html>
 </html>
