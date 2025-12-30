@@ -11,13 +11,15 @@
 
     
     body, html {
-    background-image: url('./img/i.webp');
+    background-image: url(https://yaart-web-alice-images.s3.yandex.net/bd9d5029e59111f0ae01ee904fec9547:1);
     height: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    background-size: cover;
+
     }
 
     /*поисковая панель*/
@@ -183,15 +185,20 @@
         font-family: Roboto, monospace;
 
         fieldset {
+        position: absolute; /* или relative, если не хотите «вырывать» элемент из потока */
+        left: 10px; /* отступ от левого края */
+        top: 100px; /* отступ от верхнего края — подстройте под ваш дизайн */
+        z-index: 10;
             padding: 2rem;
 
             legend {
+                color:blue;
                 font-size: 1.2rem;
                 font-weight: bold;
             }
 
             label {
-                color: white;
+                color: red;
                 display: flex;
                 flex-direction: column;
                 margin-top: 1rem;
@@ -208,19 +215,40 @@
         }
 
         .form-buttons {
+        background-color: #4CAF50; /* зелёный цвет кнопки */
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        .form-buttons:hover{
+        background-color: #45a049;
+        }
+
         input[type="submit"] {
         font-family: Roboto, monospace;
-        padding: 0.5rem;
+
         background-color: aqua;
         min-width: 150px;
-        }
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+                }
 
         input[type="reset"] {
             font-family: Roboto, monospace;
-            padding: 0.5rem;
+            width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
         background-color: red;
     }
-}
+
 
     .container {
     max-width: 1200px; /* Ограничивает ширину */
@@ -242,6 +270,13 @@
     width: 50px;
     height: 50px;
     object-fit: contain;
+    }
+
+    .logo-footer {
+        min-width: 400px;
+        max-width: 1150px;
+        padding-left: 660px;
+        padding-bottom: 70px;
     }
 
     .identity {
@@ -788,8 +823,8 @@
     }
 
     .footer-logo {
+    padding-bottom: 285px;
     width: 50px;
-    height: 50px;
     margin-right: 15px;
     filter: brightness(0) invert(1); 
     }
