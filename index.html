@@ -67,30 +67,27 @@
 </div>
 
 
-<form action="">
-<fieldset>
-        <legend>Регитсрация на сайте✍️</legend>
-    <label for="">
-        "ФИО:"
-        <input type="text" name="name" required minlength="2" placeholder="Введите ваше имя">
-    </label>
-    <label for="">
-        "Email:"
-        <input type="text" name="email" required placeholder="example@gmail.com">
-    </label>
-    <label for="">
-        "Телефон"
-        <input type="text" name="phone" placeholder="+7153285732" pattern="\+7[0-9]{10}">
-    </label>
-    
-    <div class="form-buttons">
-        <input type="reset">
-        <input type="submit">
+<div class="registration-panel">
+    <h2 class="registration-title">Регистрация на сайте 🌟</h2>
+    <form>
+        <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите ваше имя">
+        </div>
+        <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" placeholder="+7 (XXX) XXX-XX-XX">
+        </div>
+        <div class="btn-group">
+        <button type="submit" class="submit-btn">Отправить</button>
+        <button type="reset" class="reset-btn">Сбросить</button>
+        </div>
+    </form>
     </div>
-    
-</form>
-
-</fieldset>
 
 
 
