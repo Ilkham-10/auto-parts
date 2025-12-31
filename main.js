@@ -18,6 +18,19 @@ buttons.forEach(btn => {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+        link.style.animation = 'grow 0.3s ease';
+        });
+        link.addEventListener('mouseleave', () => {
+        link.style.animation = '';
+        });
+    });
+    });
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
