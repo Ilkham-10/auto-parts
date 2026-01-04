@@ -997,6 +997,7 @@
     }
 
     .registration-panel {
+    padding-bottom: 20px;
     background: linear-gradient(135deg, #3498db, #2c3e50, #34495e);
     background-size: 400% 400%;
     animation: gradient-animation 15s ease infinite;
