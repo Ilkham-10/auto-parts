@@ -31,6 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('[data-target]');
+    const contentContainer = document.getElementById('content-container');
+
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+        e.preventDefault(); // Отменяем переход по ссылке
+        const targetId = this.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+
+        // Скрываем все блоки контента
+        document.querySelectorAll('.content-block').forEach(block => {
+            block.style.display = 'none';
+        });
+
+        // Показываем выбранный блок
+        targetContent.style.display = 'block';
+        contentContainer.appendChild(targetContent);
+        });
+    });
+    });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
