@@ -53,6 +53,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     });
 
+// Открываем модальное окно при клике на кнопку
+    document.getElementById('open-modal').addEventListener('click', function() {
+    document.getElementById('modal-registration').style.display = 'block';
+    });
+
+    // Закрываем модальное окно при клике вне его или на кнопку закрытия
+    window.onclick = function(event) {
+    if (event.target == document.getElementById('modal-registration')) {
+        document.getElementById('modal-registration').style.display = 'none';
+    }
+    };
+
+    // Дополнительно: можно добавить кнопку закрытия внутри модального окна
+    document.getElementById('close-modal').addEventListener('click', function() {
+    document.getElementById('modal-registration').style.display = 'none';
+    });
+
+    
 
 
 document.addEventListener('DOMContentLoaded', function() {
