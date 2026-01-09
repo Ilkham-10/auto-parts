@@ -1,4 +1,6 @@
-
+const d = new Date("December 5, 2025 12:25:00");
+let year = d.getFullYear();
+document.getElementById("demo").innerHTML = year;
 
 
 const buttons = document.querySelectorAll('.nav-bar button');
@@ -152,6 +154,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Инициализация отображения
     updateCartDisplay();
 });
+
+
+
 
 
 

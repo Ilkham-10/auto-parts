@@ -8,9 +8,13 @@
     
     }
 
-        .footer {
+    .footer {
+     display: flex; /* Включаем Flexbox */
+  justify-content: space-between; /* Равномерное распределение блоков */
+  align-items: flex-start; /* Вертикальное выравнивание по началу */
+    width: 100%;
+  padding: 20px 0; /* Отступы сверху/снизу */
     background-color: #2c3e50;
-    padding: 30px 0;
     color: white;
     font-family: 'Arial', sans-serif;
     }
@@ -34,7 +38,18 @@
     margin-bottom: 30px;
     font-size: 28px;
 }
-    
+    .h3 {
+         color: #ff0000; /* Красный цвет заголовков (как на изображении) */
+    margin-bottom: 10px;
+    font-weight: bold;
+    }
+
+    .col {
+  width: 23%; /* Ширина каждого блока (примерно 25%, с учётом отступов) */
+  margin: 0 1%; /* Отступы между блоками */
+  list-style: none; /* Убираем маркеры у списка */
+    padding: 0;
+}
 
     .menu-container {
     display: flex;
@@ -74,14 +89,18 @@
     }
 
     .content-container {
-    margin-top: 30px;
+    position: absolute;
+    top: 200%;
+    left: 10%;
+    width: 1440px;;
     padding: 20px;
     background-color: #34495e;
-    border-radius: 8px;
+    border-radius: 70px;
     min-height: 150px;
     }
 
     .content-block {
+    
     padding: 15px;
     }
 
@@ -373,7 +392,11 @@
     }
 
     .identity {
-    padding-right: 850px;
+    padding-top: 20px;
+    position: absolute;
+    left: 43%;
+    top: 14%;
+    
     font-size: 1.8rem;
     font-weight: 700;
     color: #333;
@@ -533,7 +556,7 @@
         padding: 0.5rem 1rem;
     }
 
-   /* Основные стили контейнера */
+  /* Основные стили контейнера */
     .basket-container {
     position: fixed;
     top: 20px;
@@ -632,11 +655,6 @@
     font-size: 18px;
     }
 
-    .card {
-        transition: 0.3s;
-    }
-
-
     /* Кнопка закрытия */
     .close-btn {
     position: absolute;
@@ -728,10 +746,10 @@
     }
     }
 
-    
-    
+
+
     /* Оверлей и модальное окно для корзины */
-    
+
 
 
     /* Анимации */
@@ -839,11 +857,14 @@
     flex-wrap: wrap;
     }
 
-
     .card img {
     width: 80px;
     margin-bottom: 10px;
     }
+
+    
+    
+
 
     /* Секция о нас */
     .about {
@@ -1012,7 +1033,7 @@
     #open-modal {
         /* Позиционирование (слева) */
     position: absolute;
-    left: 20px; /* Отступ от левого края */
+    right: 220px; /* Отступ от левого края */
     top: 5%; /* Центрируем по вертикали */
     transform: translateY(-50%); /* Корректировка вертикального центрирования */
 
