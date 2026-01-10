@@ -158,10 +158,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+const closepanelbtn = document.querySelector('.close-panel-btn');
+const registrationPanel = document.querySelector('.registration-panel'); // замените на класс вашей панели
+
+// Добавляем обработчик события
+closeBtn.addEventListener('click', () => {
+  registrationPanel.style.display = 'none'; // Скрываем панель
+});
 
 
-
-
+registrationPanel.style.opacity = '0';
+registrationPanel.style.pointerEvents = 'none';
+setTimeout(() => {
+registrationPanel.style.display = 'none';
+}, 300); // 300 мс — длительность анимации
 
 
 document.querySelector("#type-filter").addEventListener("change", (evt) => {

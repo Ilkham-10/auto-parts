@@ -54,8 +54,9 @@
     .menu-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
+    
     }
 
     .menu-section {
@@ -89,14 +90,13 @@
     }
 
     .content-container {
-    position: absolute;
-    top: 200%;
-    left: 10%;
-    width: 1440px;;
-    padding: 20px;
+    width: 100%; /* Футер занимает всю доступную ширину */
+    margin-left: 180px;
+    box-sizing: border-box; /* Учитывает отступы и рамки в общей ширине */
     background-color: #34495e;
     border-radius: 70px;
     min-height: 150px;
+    padding: 15px;
     }
 
     .content-block {
@@ -656,17 +656,18 @@
     }
 
     /* Кнопка закрытия */
-    .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    .close-panel-btn {
+    padding-left: 300px;
     background: none;
     border: none;
     font-size: 24px;
     color: #7f8c8d;
     cursor: pointer;
-    line-height: 1;
     }
+
+    .close-panel-btn:hover {
+    color: #ff0000; /* Цвет при наведении (например, красный) */
+}
 
     .close-btn:hover {
     color: #c0392b;
@@ -1091,6 +1092,17 @@
     .registration-form {
     display: flex;
     flex-direction: column; /* Располагаем элементы вертикально */
+    }
+
+    .close-button-panel {
+    position: absolute; /* Размещаем кнопку абсолютно */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    background-color: transparent; /* Убираем фон */
+    border: none; /* Убираем рамку */
+    font-size: 20px; /* Размер шрифта (крестика) */
+    cursor: pointer; /* Добавляем курсор «рука» */
+    color: #666; /* Цвет крестика */
     }
 
     .form-group {
