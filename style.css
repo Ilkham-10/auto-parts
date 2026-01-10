@@ -657,9 +657,11 @@
 
     /* Кнопка закрытия */
     .close-panel-btn {
-    padding-left: 300px;
-    background: none;
     border: none;
+    position: absolute; /* Размещаем кнопку абсолютно */
+    top: 12px; /* Отступ сверху */
+    right: 12px; /* Отступ справа */
+    background: none;
     font-size: 24px;
     color: #7f8c8d;
     cursor: pointer;
@@ -1080,9 +1082,11 @@
 
 
     .modal-content {
+        position: relative;
     background-color: #fff;
     margin: 15% auto; /* Центрируем по вертикали и горизонтали */
-    padding: 20px;
+
+    padding: 40px 20px;
     border: 1px solid #ddd;
     width: 350px; /* Ширина окна */
     border-radius: 8px;
@@ -1095,11 +1099,7 @@
     }
 
     .close-button-panel {
-    position: absolute; /* Размещаем кнопку абсолютно */
-    top: 10px; /* Отступ сверху */
-    right: 10px; /* Отступ справа */
     background-color: transparent; /* Убираем фон */
-    border: none; /* Убираем рамку */
     font-size: 20px; /* Размер шрифта (крестика) */
     cursor: pointer; /* Добавляем курсор «рука» */
     color: #666; /* Цвет крестика */
