@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Оформление заказа</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Оформление заказа</h1>
+
+<div id="order-summary"></div>
+
+<form id="order-form">
+    <label>
+    Имя:
+    <input type="text" name="name" required>
+    </label>
+
+    <label>
+    Телефон:
+    <input type="tel" name="phone" required>
+    </label>
+
+    <label>
+    Адрес доставки:
+    <textarea name="address" required></textarea>
+    </label>
+
+    <button type="submit">Оплатить</button>
+</form>
+
+<div id="payment-result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<style>
+    #order-summary {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    }
+
+    #order-form label {
+    display: block;
+    margin: 10px 0 5px;
+    }
+
+    #order-form input,
+    #order-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+
+    #order-form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    }
+
+    #order-form button:hover {
+    background-color: #2980b9;
+    }
+
+    #payment-result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    display: none;
+    }
+
+    .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    }
+</style>
+</html>
+    

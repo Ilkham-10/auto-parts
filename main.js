@@ -156,6 +156,28 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+    function goToCheckout(productName) {
+        window.location.href = `/checkout?product=${productName}`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const buyButtons = document.querySelectorAll('.product-buy-btn');
+
+    buyButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+        const productCard = btn.closest('.card pulse');
+        const product = {
+            id: productCard.dataset.id,
+            name: productCard.dataset.name,
+            price: parseInt(productCard.dataset.price)
+        };
+
+        // Сохраняем товар в localStorage и переходим на страницу заказа
+        localStorage.setItem('selectedProduct', JSON.stringify(product));
+        window.location.href = 'checkout.html';
+        });
+    });
+    });
 
 
 const closepanelbtn = document.querySelector('.close-panel-btn');

@@ -8,12 +8,36 @@
     
     }
 
+        .price {
+    font-weight: bold;
+    color: #e67e22;
+    margin: 10px 0;
+    }
+
+    .img {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .product-buy-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    .product-buy-btn:hover {
+    background-color: #219653;
+    }
+
     .footer {
-     display: flex; /* Включаем Flexbox */
-  justify-content: space-between; /* Равномерное распределение блоков */
-  align-items: flex-start; /* Вертикальное выравнивание по началу */
+    display: flex; /* Включаем Flexbox */
+    justify-content: space-between; /* Равномерное распределение блоков */
+    align-items: flex-start; /* Вертикальное выравнивание по началу */
     width: 100%;
-  padding: 20px 0; /* Отступы сверху/снизу */
+    padding: 20px 0; /* Отступы сверху/снизу */
     background-color: #2c3e50;
     color: white;
     font-family: 'Arial', sans-serif;
@@ -397,7 +421,7 @@
     position: absolute;
     left: 43%;
     top: 14%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #333;
     text-shadow: 1px 1px 2px #fff;
@@ -833,6 +857,7 @@
     }
 
     .pulse {
+    width: 300px;
     animation: pulseAnim 3s infinite;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
