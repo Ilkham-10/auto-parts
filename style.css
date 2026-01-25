@@ -8,6 +8,8 @@
     
     }
 
+
+    
         .price {
     font-weight: bold;
     color: #e67e22;
@@ -862,7 +864,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
     background: white;
-    padding: 15px;
+    padding: 17px;
     text-align: center;
     }
 
